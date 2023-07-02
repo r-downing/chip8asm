@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "chip8asm"
+version = "0.1.0"
+description = "chip8 assembler/disassembler"
+authors = ["Ryan Downing <26515643+r-downing@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+isort = "^5.12.0"
+
+[tool.poetry.scripts]
+test = 'scripts:test'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
