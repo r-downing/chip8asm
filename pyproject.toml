@@ -6,7 +6,7 @@ authors = ["Ryan Downing <26515643+r-downing@users.noreply.github.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.10"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.3.0"
@@ -15,7 +15,7 @@ isort = "^5.12.0"
 [tool.poetry.scripts]
 test = 'scripts:test'
 chip8disassembler = 'chip8asm.disassembler:main'
-chip8sassembler = 'chip8asm.assembler:main'
+chip8assembler = 'chip8asm.assembler:main'
 
 [build-system]
 requires = ["poetry-core"]
