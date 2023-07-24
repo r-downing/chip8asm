@@ -180,13 +180,14 @@ def main():
 
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawTextHelpFormatter)
     parser.add_argument("asmfile", help="Path to the input assembly language text file")
-    parser.add_argument("outputfile", help="Path to the output binary file destination")
+    parser.add_argument("-o", "--outputfile", help="Path to the output binary file destination")
 
     args = parser.parse_args()
     with open(args.asmfile, "r") as fp:
         asm = fp.read()
 
-    with open(args.outputfile, "wb") as fp:
+    outputfile = args.outputfile or (".".join(args.asmfile.split(".")[:-1]) + ".ch8")
+    with open(outputfile, "wb") as fp:
         fp.write(assemble(asm))
 
 
